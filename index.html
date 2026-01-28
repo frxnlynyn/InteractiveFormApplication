@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Form Application</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="app-header">
+    <h1>Interactive Form Application</h1>
+    <p class="muted">
+      Complete the form. You will receive immediate feedback. Fields marked * are required.
+    </p>
+  </header>
+
+  <main class="container">
+    <!-- FORM CARD -->
+    <section class="card" aria-labelledby="form-title">
+      <h2 id="form-title">Form</h2>
+
+      <!-- STUDENT TODO:
+           1) Add required fields (at least 6 inputs total)
+           2) Include an error message container under EACH field
+           3) Use correct label-for/id pairing
+      -->
+      <form id="appForm" novalidate>
+
+        <!-- FIELD TEMPLATE (COPY/PASTE FOR EACH FIELD)
+        <div class="field">
+          <label for="fieldId">Label Text *</label>
+          <input id="fieldId" name="fieldName" type="text" />
+          <p class="error" id="fieldIdError"></p>
+        </div>
+        -->
+
+        <!-- TODO: Full Name field -->
+
+        <!-- TODO: Email field -->
+
+        <!-- TODO: Phone field (or equivalent) -->
+
+        <!-- TODO: Select dropdown (request type) -->
+
+        <!-- TODO: Textarea (message/description) -->
+
+        <!-- TODO: Consent checkbox -->
+
+        <div class="actions">
+          <!-- STUDENT TODO:
+               Disable submit by default.
+               JS should enable it only when valid (or keep enabled but validate on submit).
+          -->
+          <button id="submitBtn" type="submit">Submit</button>
+          <button id="resetBtn" type="button">Reset</button>
+        </div>
+
+      </form>
+    </section>
+
+    <!-- SUCCESS / SUMMARY PANEL -->
+    <section class="card" id="successPanel" hidden aria-live="polite">
+      <h2>Submission Successful ✅</h2>
+
+      <!-- STUDENT TODO:
+           JS must insert a summary of the submitted values here.
+      -->
+      <div id="summaryBox"></div>
+
+      <button id="newEntryBtn" type="button">Create Another Entry</button>
+    </section>
+  </main>
+
+  <footer class="app-footer muted">
+    <p>GUI Programming • Assessment 3 • JavaScript Interaction</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

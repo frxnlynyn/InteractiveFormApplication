@@ -1,0 +1,75 @@
+/* Base */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  line-height: 1.5;
+}
+.container {
+  width: min(900px, 92vw);
+  margin: 20px auto;
+}
+.muted { opacity: 0.75; }
+
+/* Layout */
+.app-header {
+  padding: 18px;
+  border-bottom: 1px solid #ddd;
+}
+.card {
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+/* Form */
+.field {
+  margin-bottom: 14px;
+  display: grid;
+  gap: 6px;
+}
+label { font-weight: 700; }
+input, select, textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #bbb;
+}
+textarea { min-height: 110px; }
+
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+/* States */
+.error {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #b00020;
+  min-height: 18px; /* keeps layout stable */
+}
+
+/* STUDENT TODO:
+   JS should apply these classes when validating.
+*/
+.is-invalid {
+  border-color: #b00020 !important;
+}
+.is-valid {
+  border-color: #1b8f3a !important;
+}
+
+button {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #bbb;
+  background: white;
+  cursor: pointer;
+}
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
