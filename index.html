@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interactive Form Application</title>
+  <title> Interactive Form Application </title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
   <header class="app-header">
-    <h1>Interactive Form Application</h1>
+    <h1> Interactive Form Application </h1>
     <p class="muted">
       Complete the form. You will receive immediate feedback. Fields marked * are required.
     </p>
@@ -18,7 +20,7 @@
   <main class="container">
     <!-- FORM CARD -->
     <section class="card" aria-labelledby="form-title">
-      <h2 id="form-title">Form</h2>
+      <h2 id="form-title"> Form </h2>
 
       <!-- STUDENT TODO:
            1) Add required fields (at least 6 inputs total)
@@ -36,24 +38,66 @@
         -->
 
         <!-- TODO: Full Name field -->
+        <div class="fullName">
+          <label for="fullName"> Full Name * </label>
+          <input id="fullName" name="fullName" type="text" placeholder="Ex. Dojin Park" />
+          <p class="error" id="fullNameError"></p>
+        </div>
 
         <!-- TODO: Email field -->
+        <div class="email">
+          <label for="email"> Email * </label>
+          <input id="email" name="email" type="email" placeholder="Ex. parkdojin123@gmail.com" />
+          <p class="error" id="emailError"></p>
+        </div>
 
         <!-- TODO: Phone field (or equivalent) -->
+        <div class="phoneNumber">
+          <label for="phone"> Phone Number * </label>
+          <input id="phone" name="phone" type="tel" placeholder="Ex. +501 604-6767" />
+          
+          <p class="error" id="phoneError"></p>
+        </div>
 
         <!-- TODO: Select dropdown (request type) -->
+        <div class="requestType">
+          <label for="requestType"> Request Type * </label>
+          <select id="requestType" name="requestType">
+            <option value="option"> Please choose an option.. </option>
+            <option value="academic_support"> Academic Support </option>
+            <option value="career_services"> Career Services </option>
+            <option value="counseling"> Counseling </option>
+            <option value="financial_aid"> Financial Aid </option>
+            <option value="other"> Other </option>
+          </select>
+          <p class="error" id="requestTypeError"></p>
+        </div>
 
         <!-- TODO: Textarea (message/description) -->
+        <div class="description">
+          <label for="description"> Description * </label>
+          <textarea id="description" name="description"
+            placeholder="Please provide detailed information about your request. " required
+            aria-describedby="desc-hint"></textarea>
+          <p class="hint" id="desc-hint"> Maximum of 500 words. </p>
+          <p class="error" id="descriptionError"></p>
+        </div>
 
         <!-- TODO: Consent checkbox -->
+        <div class="checkbox">
+          <input type="checkbox" id="consent" name="consent" required style="width:18px; height:18px; margin-top:2px;">
+          <label for="consent" style="font-weight:600; color: black;"> I consent to the processing of my personal
+            data for the purpose of handling this request. * </label>
+        </div>
+
 
         <div class="actions">
           <!-- STUDENT TODO:
                Disable submit by default.
                JS should enable it only when valid (or keep enabled but validate on submit).
           -->
-          <button id="submitBtn" type="submit">Submit</button>
-          <button id="resetBtn" type="button">Reset</button>
+          <button id="submitBtn" type="submit"> Submit </button>
+          <button id="resetBtn" type="button"> Reset </button>
         </div>
 
       </form>
@@ -61,21 +105,23 @@
 
     <!-- SUCCESS / SUMMARY PANEL -->
     <section class="card" id="successPanel" hidden aria-live="polite">
-      <h2>Submission Successful ✅</h2>
+      <h2> Submission Successful ✅ </h2>
 
       <!-- STUDENT TODO:
            JS must insert a summary of the submitted values here.
       -->
       <div id="summaryBox"></div>
 
-      <button id="newEntryBtn" type="button">Create Another Entry</button>
+      <button id="newEntryBtn" type="button"> Create Another Entry </button>
     </section>
   </main>
 
-  <footer class="app-footer muted">
-    <p>GUI Programming • Assessment 3 • JavaScript Interaction</p>
+  <footer class="app-footer" aria-label="Page footer">
+    <p> GUI Programming • Assessment 3 • JavaScript Interaction </p>
   </footer>
+
 
   <script src="app.js"></script>
 </body>
+
 </html>

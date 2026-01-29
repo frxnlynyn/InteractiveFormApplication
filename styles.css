@@ -4,6 +4,8 @@ body {
   margin: 0;
   font-family: system-ui, Arial, sans-serif;
   line-height: 1.5;
+  background-color: #eff3e5;
+ /* background-color:#191a1d; */ 
 }
 .container {
   width: min(900px, 92vw);
@@ -13,25 +15,35 @@ body {
 
 /* Layout */
 .app-header {
-  padding: 18px;
+  padding: 12px;
   border-bottom: 1px solid #ddd;
+  color: #2F3E3D;
+  /* background-color: #2a2c30; */
+   background-color: #a5c3c1;
 }
 .card {
   border: 1px solid #ddd;
+  /*background-color: #000c25; */
+  background-color: #D9A5A0;
   border-radius: 14px;
   padding: 16px;
   margin-bottom: 16px;
 }
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  background-color: #ca9692;
+}
 
 /* Form */
-.field {
+.field, .request, .number, .email, .fullName, .phoneNumber, .requestType, .description {
   margin-bottom: 14px;
   display: grid;
-  gap: 6px;
+  gap: 2px;
 }
-label { font-weight: 700; }
+label { font-weight: 700; color:black;}
 input, select, textarea {
   padding: 10px;
+  background-color: #F4F7F6;
   border-radius: 10px;
   border: 1px solid #bbb;
 }
@@ -67,9 +79,48 @@ button {
   border-radius: 10px;
   border: 1px solid #bbb;
   background: white;
+  font-size: 1rem;
   cursor: pointer;
 }
 button:disabled {
   opacity: 0.55;
   cursor: not-allowed;
+}
+
+/* Color for Submit Button */
+#submitBtn {
+  background-color: #8f9575;
+  color: white;
+  border: none;
+}
+#submitBtn:hover {
+  background-color: #6e7355;
+}
+
+/* Color for Reset Button */
+#resetBtn {
+  background-color: #a19e9e;
+  color: white;
+  border: none;
+}
+#resetBtn:hover {
+  background-color: #7d7a7a;
+}
+
+/* Checkbox Field */
+.field.checkbox{
+  margin-bottom: 14px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+/* Footer Section */
+footer{
+  padding: 18px 0 26px;
+      text-align: center;
+      font-size: 14px;
+      color: #2F3E3D;
+      /* background-color: #2a2c30; */
+      background-color: #a5c3c1;
 }

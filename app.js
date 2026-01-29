@@ -7,20 +7,21 @@
 // It should store field values + a validity map.
 const state = {
   values: {
-    // fullName: "",
-    // email: "",
-    // phone: "",
-    // requestType: "",
-    // message: "",
-    // consent: false
+    fullName: "",
+    email: "",
+    phone: "",
+    requestType: "",
+    description: "",
+    consent: false
   },
+
   valid: {
-    // fullName: false,
-    // email: false,
-    // phone: false,
-    // requestType: false,
-    // message: false,
-    // consent: false
+    fullName: false,
+    email: false,
+    phone: false,
+    requestType: false,
+    description: false,
+    consent: false
   }
 };
 
@@ -41,6 +42,14 @@ const newEntryBtn = document.getElementById("newEntryBtn");
 // - updateSubmitState()
 
 function setError(fieldId, message) {
+  const input = document.getElementById(fieldId);
+  const errorP = document.getElementById(`${fieldId}Error`);
+
+  input.classList.add("is-invalid");
+  input.classList.remove("is-valid");
+  errorP.textContent = message;
+  
+
   // TODO: find input by id, add .is-invalid, remove .is-valid
   // TODO: find error <p> by id `${fieldId}Error` and set message
 }
