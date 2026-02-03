@@ -18,48 +18,34 @@
   </header>
 
   <main class="container">
-    <!-- FORM CARD -->
+
     <section class="card" aria-labelledby="form-title">
       <h2 id="form-title"> Form </h2>
 
-      <!-- STUDENT TODO:
-           1) Add required fields (at least 6 inputs total)
-           2) Include an error message container under EACH field
-           3) Use correct label-for/id pairing
-      -->
       <form id="appForm" novalidate>
 
-        <!-- FIELD TEMPLATE (COPY/PASTE FOR EACH FIELD)
-        <div class="field">
-          <label for="fieldId">Label Text *</label>
-          <input id="fieldId" name="fieldName" type="text" />
-          <p class="error" id="fieldIdError"></p>
-        </div>
-        -->
-
-        <!-- TODO: Full Name field -->
+        <!-- Full Name -->
         <div class="fullName">
           <label for="fullName"> Full Name * </label>
           <input id="fullName" name="fullName" type="text" placeholder="Ex. Dojin Park" />
           <p class="error" id="fullNameError"></p>
         </div>
 
-        <!-- TODO: Email field -->
+        <!-- Email -->
         <div class="email">
           <label for="email"> Email * </label>
           <input id="email" name="email" type="email" placeholder="Ex. parkdojin123@gmail.com" />
           <p class="error" id="emailError"></p>
         </div>
 
-        <!-- TODO: Phone field (or equivalent) -->
+        <!-- Phone -->
         <div class="phoneNumber">
           <label for="phone"> Phone Number * </label>
           <input id="phone" name="phone" type="tel" placeholder="Ex. +501 604-6767" />
-          
           <p class="error" id="phoneError"></p>
         </div>
 
-        <!-- TODO: Select dropdown (request type) -->
+        <!-- Request Type -->
         <div class="requestType">
           <label for="requestType"> Request Type * </label>
           <select id="requestType" name="requestType">
@@ -73,29 +59,32 @@
           <p class="error" id="requestTypeError"></p>
         </div>
 
-        <!-- TODO: Textarea (message/description) -->
+        <!-- Description -->
         <div class="description">
           <label for="description"> Description * </label>
           <textarea id="description" name="description"
-            placeholder="Please provide detailed information about your request. " required
+            placeholder="Please provide detailed information about your request."
             aria-describedby="desc-hint"></textarea>
+
           <p class="hint" id="desc-hint"> Maximum of 500 words. </p>
           <p class="error" id="descriptionError"></p>
         </div>
 
-        <!-- TODO: Consent checkbox -->
+        <!-- Consent -->
         <div class="checkbox">
-          <input type="checkbox" id="consent" name="consent" required style="width:18px; height:18px; margin-top:2px;">
-          <label for="consent" style="font-weight:600; color: black;"> I consent to the processing of my personal
-            data for the purpose of handling this request. * </label>
+          <input type="checkbox" id="consent" name="consent"
+            style="width:18px; height:18px; margin-top:2px;">
+
+          <label for="consent" style="font-weight:600; color: black;">
+            I consent to the processing of my personal data *
+          </label>
+
+          <!-- FIXED -->
+          <p class="error" id="consentError"></p>
         </div>
 
 
         <div class="actions">
-          <!-- STUDENT TODO:
-               Disable submit by default.
-               JS should enable it only when valid (or keep enabled but validate on submit).
-          -->
           <button id="submitBtn" type="submit"> Submit </button>
           <button id="resetBtn" type="button"> Reset </button>
         </div>
@@ -103,23 +92,24 @@
       </form>
     </section>
 
-    <!-- SUCCESS / SUMMARY PANEL -->
+
+    <!-- SUCCESS PANEL -->
     <section class="card" id="successPanel" hidden aria-live="polite">
+
       <h2> Submission Successful ✅ </h2>
 
-      <!-- STUDENT TODO:
-           JS must insert a summary of the submitted values here.
-      -->
       <div id="summaryBox"></div>
 
       <button id="newEntryBtn" type="button"> Create Another Entry </button>
+
     </section>
+
   </main>
 
-  <footer class="app-footer" aria-label="Page footer">
+
+  <footer class="app-footer">
     <p> GUI Programming • Assessment 3 • JavaScript Interaction </p>
   </footer>
-
 
   <script src="app.js"></script>
 </body>
