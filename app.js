@@ -2,6 +2,10 @@
 // Interactive Form Application
 // ===============================
 
+// STUDENT TODO 1:
+// Define your initial state object.
+// It should store field values + a validity map.
+
 // Initial state
 const state = {
   values: {
