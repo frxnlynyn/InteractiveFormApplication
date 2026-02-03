@@ -212,7 +212,7 @@ resetBtn.addEventListener("click", () => {
 
   form.reset();
 
-  // FIXED reset
+  
   Object.keys(state.values).forEach(k => {
     state.values[k] = k === "consent" ? false : "";
   });
